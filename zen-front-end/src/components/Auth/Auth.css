@@ -1,0 +1,23 @@
+
+.cont {
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  box-shadow: 3px 5px 15px 3px grey;
+  background-color: white;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  margin: 10% auto;
+}
+
+.box h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
