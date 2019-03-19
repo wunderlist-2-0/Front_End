@@ -5,16 +5,16 @@ import { connect } from 'react-redux';
 import List from './components/Home/List.js';
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
-  return (
+  return(
     <Route
       {...rest}
-      render = { props => 
+      render={props => {
         localStorage.getItem('token') ? (
-          <List {...props} />
+          <Component {...props} />
         ) : (
           <Redirect to='/login' />
-        );
-      }
+        )
+      }}
     />
   )
 }

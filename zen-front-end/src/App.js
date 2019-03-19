@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-import PrivateRoute from './components/PrivateRoute.js'
+//import PrivateRoute from './components/PrivateRoute.js'
 
 import './App.css';
 
@@ -15,8 +15,9 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
+        <Login />
         <Route exact path='/' Component={ Home } />
-        <PrivateRoute  path='/list/' Component={ List } />
+        <Route  path='/list/' Component={ List } />
         <Route path='/login' Component={Login} />
         <Route path='/signup' Component={SignUp} />
       </div>

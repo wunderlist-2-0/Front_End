@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import { login } from '../../actions';
+
 import './Auth.css';
 
 class Login extends Component {
@@ -37,11 +39,20 @@ class Login extends Component {
       <div className='cont'>
         <div className='box'>
           <h2>Please Log In</h2>
+          <hr className='hr' />
           <form onSubmit={this.login}>
+            <h3>Username</h3>
             <input
               type='text'
               name='username'
               value={this.state.credentials.username}
+              onChange={this.handleLogin}
+            />
+            <h3>Password</h3>
+            <input
+              type='password'
+              name='password'
+              value={this.state.credentials.password}
               onChange={this.handleLogin}
             />
             <button>Log in!</button>
@@ -52,4 +63,4 @@ class Login extends Component {
   }
 }
 
-export default connect(null, {  })(Login);
+export default connect(null, { login })(Login);
