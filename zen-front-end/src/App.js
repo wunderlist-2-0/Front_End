@@ -6,7 +6,7 @@ import './App.css';
 
 import NavBar from './components/NavBar/NavBar.js';
 import Home from './components/Home/Home.js';
-import List from './components/Home/List.js';
+import List from './components/List/List.js';
 import Login from './components/Auth/Login.js';
 import SignUp from './components/Auth/SignUp.js';
 
