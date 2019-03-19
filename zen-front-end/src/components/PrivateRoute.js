@@ -15,6 +15,6 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
       )}
     />
   )
-}
+};
 
-export default withRouter(connect()(PrivateRoute));
+export default withRouter(connect(null, {})(PrivateRoute));

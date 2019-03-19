@@ -13,8 +13,7 @@ const NavBar = ({props}) => (
     <div className='nav-items'>
       <Link to='/' className='nav-item'>Home</Link>
       <Link to='/list' className='nav-item'>My List</Link>
-      <Link to='/signup' className='nav-item'>Sign Up</Link>
-      <Link to='/login' className='nav-item'>Login</Link>
+      <Link to='/login' className='nav-item'>Login/Register</Link>
     </div>
   </div>
 );

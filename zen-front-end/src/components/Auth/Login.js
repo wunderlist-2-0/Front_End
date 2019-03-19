@@ -57,6 +57,8 @@ class Login extends Component {
             />
             <button>Log in!</button>
           </form>
+
+          <p>Not a member? Register <a href='/signup'>here</a></p>
         </div>
       </div>
     )
