@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import { Route, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import List from './components/Home/List.js';
@@ -19,4 +19,4 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
   )
 }
 
-export default connect()(PrivateRoute);
+export default withRouter(connect()(PrivateRoute));
