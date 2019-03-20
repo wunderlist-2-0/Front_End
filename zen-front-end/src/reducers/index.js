@@ -1,13 +1,35 @@
-import { UPDATE_TITLE, ADD_TODO, TOGGLE_TODO } from '../actions';
+import { UPDATE_TITLE, ADD_ITEM, TOGGLE_TODO } from '../actions';
 
 const initialState = {
-  listBox: [],
-  title: 'My New List',
-  todos: [
-    { id:999, task: 'Join Wunderlist 2.0', completed: true },
-    { id: 998, task: 'Create a new list', completed: false },
-    { id: 997, task: 'Repeat', completed: false }
+  listBox: [
+    {
+      title: 'My New List',
+      items: [
+        {
+          id:999,
+          text: 'Join Wunderlist 2.0',
+          date: Date.now(),
+          completed: true,
+          userId: '',
+        },
+        {
+          id: 998,
+          text: 'Create a new list',
+          date: Date.now(),
+          completed: true,
+          userId: '',
+        },
+        {
+          id: 997,
+          text: 'Repeat',
+          date: Date.now(),
+          completed: false,
+          userId: '',
+        }
+      ]
+    }
   ]
+
 };
 
 const reducer = (state = initialState, action) => {
@@ -18,15 +40,17 @@ const reducer = (state = initialState, action) => {
         title: action.payload
       };
 
-    case ADD_TODO:
-      const newTodo = {
-        text: action.payload,
+    case ADD_ITEM:
+      const newItem = {
         id: Date.now(),
-        completed: false
+        text: action.payload,
+        date: Date.now(),
+        completed: false,
+        userId: '',
       };
       return {
         ...state,
-        todos: [...state.todos, newTodo]
+        items: [...state.items, newItem]
       };
 
       case TOGGLE_TODO:

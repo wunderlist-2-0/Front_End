@@ -31,13 +31,11 @@ export const signup = creds => dispatch => {
     });
 };
 
-let nextTodoId = 0
 
-export const ADD_TODO = 'ADD_TODO';
-export const addTodo = text => ({
-  type: 'ADD_TODO',
-  id: nextTodoId++,
-  payload: text
+export const ADD_ITEM = 'ADD_ITEM';
+export const addItem = newItem => ({
+  type: 'ADD_ITEM',
+  payload: newItem
 })
 
 export const TOGGLE_TODO = 'TOGGLE_TODO';
